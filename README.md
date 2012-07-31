@@ -1,17 +1,22 @@
-Remember-me autentifikacia:
----------------------------
+Remember-me Authentication Sample
+==================================
+Prerequisities
+--------------
 
-* vytvori sa specialna cookie s nazvom 'SPRING_SECURITY_REMEMBER_ME_COOKIE'
+Background
+----------
+* a special HTTP cookie named SPRING_SECURITY_REMEMBER_ME_COOKIE is created
 
-* hodnota H tejto cookie sa nastavi nasledovne:
-  H = HEX(MD5(<userName>:<tokenExpirationTime>:<password>:<key>)), kde
-    userName - prihlasovacie meno pouzivatela
-    tokenExpirationTime - by default 2 tyzdne v ms
-    password - heslo pouzivatela
-    key - by default nahodne vygenerovany kluc, moze sa zadat na <remember-me> elemente v Spring Security configu
-    MD5 - md5 hash funckia
-    HEX - funckia char[] org.springframework.security.crypto.codec.Hex.encode(byte[] bytes)
+* the value H of this cookie is computed as follows:
 
-* pre vyskusanie staci vo Firebugu zmazat JSESSIONID a zachovat SPRING_SECURITY_REMEMBER_ME_COOKIE cookie a refreshnut stranku
+  H = HEX(MD5(<userName>:<tokenExpirationTime>:<password>:<key>)), where
 
-* pocas requestu je identita pouzivatela znovu-vytvorena po dekodovani remeber-me cookie a je nastavena do security contextu
+    tokenExpirationTime - token expiration, by default 2 weeks
+    
+    key - a random secret, can be specified by 'key' attribute of remember-me element
+    
+    HEX - char[] org.springframework.security.crypto.codec.Hex.encode(byte[] bytes)
+
+* to validate it works just remoce session cookie using Firebug (keep SPRING_SECURITY_REMEMBER_ME_COOKIE cookie) and refresh
+
+* during the subsequent reuqest the user authentication token is recreted based on the info extracted from SPRING_SECURITY_REMEMBER_ME_COOKIE cookie
