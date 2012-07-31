@@ -1,0 +1,215 @@
+## test data for requisitions web app
+### adapted from http://www.zytrax.com/books/ldap/
+
+version: 1
+
+## define DIT ROOT/BASE/SUFFIX
+## uses RFC 2377 format
+
+# organization
+
+dn: dc=example, dc=com
+dc: example
+description: Example Inc in Toronto
+objectClass: dcObject
+objectClass: organization
+o: Example, Inc.
+
+# organizational unit users
+
+dn: ou=users, dc=example, dc=com
+ou: users
+description: all users in organization 
+objectClass: organizationalUnit
+
+# person Albert Prince
+
+dn: uid=albert,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Albert Prince
+sn: Prince
+uid: albert
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Alexandra Thegreat
+
+dn: uid=alexandra,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Alxexandra Thegreat
+sn: Thegreat
+uid: alexandra
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+
+# person Alan
+
+dn: uid=alan,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Alan Airdale
+sn: Airdale
+uid: alan
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Bobby
+
+dn: uid=bobby,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Bobby Sox
+sn: Sox
+uid: bobby
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Carl
+
+dn: uid=carl,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Carl Cruel
+sn: Cruel
+uid: carl
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Doug
+
+dn: uid=doug,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Doug Douglas
+sn: Douglas
+uid: doug
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Edith
+
+dn: uid=edith,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Edith Piaf
+sn: Piaf
+uid: edith
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Fanny
+
+dn: uid=fanny,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Fanny Hill
+sn: Hill
+uid: fanny
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Greta
+
+dn: uid=greta,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Greta Garbo
+sn: Garbo
+uid: greta
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Hildy
+
+dn: uid=hildy,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Hildy Johnson
+sn: Johnson
+uid: hildy
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Izzy
+
+dn: uid=izzy,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Izzy Stone
+sn: Stone
+uid: izzy
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Jack
+
+dn: uid=jack,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Jack Sprat
+sn: Sprat
+uid: jack
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+# person Kate
+
+dn: uid=kate,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Kate Kat
+sn: Kat
+uid: kate
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+
+
+# person Victor Victoria
+
+dn: uid=victor,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Victor Victoria
+sn: Victoria
+uid: victor
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=alexandra,ou=Users,dc=example,dc=com
+
+# person Zachary Zap
+
+dn: uid=zachary,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Zachary Zap
+sn: Zap
+uid: zachary
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=victor,ou=Users,dc=example,dc=com
+# person Zachary Zap
+
+dn: uid=zelda,ou=users, dc=example, dc=com
+objectClass: inetOrgPerson
+cn: Zelda Zell
+sn: Zell
+uid: zelda
+mail: hfckve@gmail.com
+ou: users
+userPassword: secret
+manager: uid=zachary,ou=Users,dc=example,dc=com
+
