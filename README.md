@@ -4,7 +4,7 @@ Prerequisities
 --------------
 * install and configure an LDAP server, e.g. Apache DS 2.x
 
-* import ldif files to initialize identities
+* import included ldif file to initialize identities
 
 
 Background
