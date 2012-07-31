@@ -2,6 +2,10 @@ Remember-me Authentication Sample
 ==================================
 Prerequisities
 --------------
+* install and configure an LDAP server, e.g. Apache DS 2.x
+
+* import ldif files to initialize identities
+
 
 Background
 ----------
@@ -9,7 +13,7 @@ Background
 
 * the value H of this cookie is computed as follows:
 
-  H = HEX(MD5(<userName>:<tokenExpirationTime>:<password>:<key>)), where
+  H = HEX(MD5(userName:tokenExpirationTime:password:key)), where
 
     tokenExpirationTime - token expiration, by default 2 weeks
     
